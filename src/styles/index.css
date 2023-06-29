@@ -1,12 +1,85 @@
+/* * {
+  background-color: rgb(7, 6, 6);
+} */
+.trafficLight {
+  display: inline-block;
+  background-color: rgba(32, 32, 32, 0.801);
+  padding: 0.625rem;
+  border-radius: 1.875rem;
+  border-style: solid;
+  border-color: rgb(110, 110, 110);
+}
 
-/* 
+.light {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  padding-bottom: 2px;
+  border-style: solid;
+  border-color: rgba(2, 2, 2, 0.644);
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.red {
+  background-color: rgba(255, 0, 0, 0.801);
+}
+.yellow {
+  background-color: rgba(255, 255, 0, 0.801);
+}
+.green {
+  background-color: rgba(0, 128, 0, 0.801);
+}
+.purple {
+  background-color: rgba(128, 0, 128, 0.801);
+}
 
-*/
+.glow-red {
+  box-shadow: 0 0 20px 10px #ffb7b7,
+    /* inner white */ 0 0 60px 40px rgba(255, 0, 0, 0.801),
+    /* middle magenta */ 0 0 20px 10px rgba(255, 0, 0, 0.801); /* outer cyan */
+  animation: glow-red 1s linear infinite alternate;
+}
+
+@keyframes glow-red {
+  to {
+    box-shadow: 0px 0px 20px 10px #ffb7b7;
+  }
+}
+
+.glow-yellow {
+  box-shadow: 0 0 25px 10px #f9ffa5,
+    /* inner white */ 0 0 60px 40px rgba(255, 255, 0, 0.801),
+    /* middle magenta */ 0 0 20px 10px rgba(255, 255, 0, 0.801); /* outer cyan */
+  animation: glow-yellow 1s linear infinite alternate;
+}
+
+@keyframes glow-yellow {
+  to {
+    box-shadow: 0px 0px 20px 10px #f9ffa5;
+  }
+}
+
+.glow-green {
+  box-shadow: 0 0 25px 10px #90da8d,
+    /* inner white */ 0 0 60px 40px rgba(0, 128, 0, 0.801),
+    /* middle magenta */ 0 0 20px 10px rgba(0, 128, 0, 0.801); /* outer cyan */
+  animation: glow-green 1s linear infinite alternate;
+}
+
+@keyframes glow-green {
+  to {
+    box-shadow: 0px 0px 20px 10px #90da8d;
+  }
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px 10px rgb(255, 165, 255),
+    /* inner white */ 0 0 60px 40px rgba(128, 0, 128, 0.801),
+    /* middle magenta */ 0 0 20px 10px rgba(128, 0, 128, 0.801); /* outer cyan */
+  animation: glow-purple 1s linear infinite alternate;
+}
+
+@keyframes glow-purple {
+  to {
+    box-shadow: 0px 0px 20px 10px rgb(255, 165, 255);
+  }
+}
